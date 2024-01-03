@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<head>
+    <title>online Test</title>
+    <link rel="stylesheet" href="../onlineTest.css/test.css">
+</head>
+<body>
+    <header>
+        <div class="heading">
+            <h1 id="h1">Online Test </h1>
+
+        </div>
+
+        <div class="tab">
+
+            <button class="btn" type="submit" onclick="checkResult()">SUBMIT</button>
+            <button id="restart" class="btn" type="submit" onclick="reload()">RESTART</button>
+
+        </div>
+    </header>
+    <h1 id="loading">Loading...</h1>
+    <div class="container">
+        <div id="quizline">
+
+        </div>
+        <div class="quizbox">
+            <div style="display:none" id="ner">
+                <h5>Select any of the option given bellow:-</h5>
+                <span id="sr"></span> <span id="demo"></span></br>
+                <input type="radio" name="option" onclick="selectOp(0)" value="opt1" id="opt1" />
+                <label for="opt1"><span class="opt"></span></label><br />
+                <input type="radio" name="option" onclick="selectOp(1)" value="opt2" id="opt2" />
+                <label for="opt2"><span class="opt"></span></label><br />
+                <input type="radio" name="option" onclick="selectOp(2)" value="opt3" id="opt3" />
+                <label for="opt3"><span class="opt"></span></label><br />
+                <input type="radio" name="option" onclick="selectOp(3)" value="opt4" id="opt4" />
+                <label for="opt4"><span class="opt"></span></label><br />
+                <input style="display: none;" type="radio" name="option" value="opt5" id="opt5" />
+                <label for="opt5"><span class="opt"></span></label><br />
+
+
+
+
+                <p id="de"></p>
+            </div>
+            <button style="font-size: 30px;" type="button" onclick="backFun()" id="back">&#10216</button>
+            <button style="font-size:30px;" type="button" onclick="newFun()" id="next">&#10217</button>
+
+        </div>
+
+
+
+    </div>
+
+
+
+
+
+    <div class="resultTable">
+        <div style="display:none" id="results">
+
+
+
+            <span>Obtained marks</span>=<span id="Om"></span><br>
+            <span>Correct</span>=<span id="co"></span><br>
+            <span>Wrong</span>=<span id="wr"></span><br>
+            <span>Unattempted</span>=<span id="unattempted"></span><br>
+            <span>percentage</span>=<span id="per"></span><br>
+        </div>
+        <table>
+            <thead>
+                <tr>
+
+
+
+                    <th>Quistion</th>
+                    <th>correctAnswerId</th>
+                    <th>UsersAnswerId</th>
+                    <th>UsersAnswer</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody id="anskey">
+
+            </tbody>
+
+
+        </table>
+
+    </div>
+    <script src="../onlineTest.js/onlineTest.js"></script>
+
+    </body>
+    </html>
